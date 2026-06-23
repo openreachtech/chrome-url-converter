@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Domain Converter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔄 URL Domain Converter</h1>
+
+    <section class="rules-section">
+      <h2>Registered Rules</h2>
+      <div id="rules-list" class="rules-list">
+        <p class="empty-message" id="empty-message">No rules registered yet.</p>
+      </div>
+    </section>
+
+    <section class="add-section">
+      <h2>Add Rule</h2>
+      <form id="add-form" novalidate>
+        <div class="form-group">
+          <label for="source-host">Source Domain</label>
+          <input
+            type="text"
+            id="source-host"
+            placeholder="e.g. staging.example.com"
+            autocomplete="off"
+            spellcheck="false"
+            maxlength="253"
+          >
+        </div>
+        <div class="form-group">
+          <label for="target-host">Target Domain</label>
+          <input
+            type="text"
+            id="target-host"
+            placeholder="e.g. production.example.com"
+            autocomplete="off"
+            spellcheck="false"
+            maxlength="253"
+          >
+        </div>
+        <p id="error-message" class="error-message" hidden></p>
+        <button type="submit" class="btn-primary">Add</button>
+      </form>
+    </section>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
